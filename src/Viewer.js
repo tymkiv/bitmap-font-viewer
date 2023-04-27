@@ -3,7 +3,7 @@ import * as PIXI from "pixi.js";
 export class Viewer {
     constructor(DOMElement) {
         this.DOMElement = DOMElement;
-        console.dir(this.DOMElement)
+
         this.app = new PIXI.Application({
             width: this.DOMElement.clientWidth,
             height: this.DOMElement.clientHeight,
