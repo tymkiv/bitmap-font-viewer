@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navigation">
+    <toolcool-color-picker color="#ccc" id="color-picker"></toolcool-color-picker>
+    <input type="file" id="file-input" class="file-input" multiple>
+    <label for="file-input" class="file-input-label">Select some files</label>
+    <select id="select-input" class="select-input">
+        <option value="">Choose font</option>
+    </select>
+
+    <textarea placeholder="111..." id="textarea-input" class="textarea-input"></textarea>
+</div>
+
+<div class="canvas-container" id="canvas-container"></div>
+
+
+<div class="drop-area" id="drop-area">
+    <p>Select files</p>
+</div>
+
+</body>
+</html>

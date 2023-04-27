@@ -1,0 +1,23 @@
+{
+  "name": "bitmap-font-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "v.tymkiv",
+  "license": "ISC",
+  "dependencies": {
+    "pixi.js": "^6.4.2",
+    "toolcool-color-picker": "^1.0.15"
+  },
+  "devDependencies": {
+    "@parcel/packager-xml": "^2.8.3",
+    "@parcel/transformer-xml": "^2.8.3",
+    "parcel": "^2.8.3",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1"
+  }
+}
