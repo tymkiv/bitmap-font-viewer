@@ -4,3 +4,6 @@ dist
 .parcel-cache
 .cache
 resourceMap.json
+
+# Local Netlify folder
+.netlify
