@@ -11,6 +11,7 @@ import { Viewer } from "./Viewer";
 
 window.PIXI = PIXI;
 
+console.log(1)
 
 window.masterStream = new MasterStream();
 window.store = new Store();
