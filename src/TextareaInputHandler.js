@@ -3,6 +3,7 @@ export class TextareaInputHandler {
         this.DOMElement = DOMElement;
 
         this.DOMElement.addEventListener("input", () => this._handler());
+        this._handler();
     }
 
     _handler() {

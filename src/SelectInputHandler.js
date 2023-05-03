@@ -4,12 +4,12 @@ export class SelectInputHandler {
     constructor(DOMElement) {
         this.DOMElement = DOMElement;
 
-        store.fonts.forEach(font => this._createOption(font));
+        Object.keys(store.fonts).forEach(font => this._createOption(font));
 
-        masterStream.subscribe("onXMLReady", ({ file, status }) => {
+        masterStream.subscribe("onXMLReady", ({ name, status }) => {
             if (!status) return;
 
-            this._createOption(nameWithoutExt(file.name));
+            this._createOption(name);
             this._handler();
         });
 

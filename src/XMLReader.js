@@ -22,16 +22,17 @@ export class XMLReader {
 
         // заменяем путь к png файлу
         xmlDoc.querySelector("pages page").setAttribute("file", pngPath);
-
+        const fontSize = xmlDoc.querySelector("info").getAttribute("size");
         // превращаем в blob для того, что бы записать файл по ссылке
         const xmlBlob = this._parseInBlob(xmlDoc);
 
         // файл по ссылке
         const url = URL.createObjectURL(xmlBlob);
+        const name = nameWithoutExt(file.name);
 
-        PIXI.Loader.shared.add(nameWithoutExt(file.name), url).load(() => {
+        PIXI.Loader.shared.add(name, url).load(() => {
             // эмитим результат
-            this._emitXMLReady({ file });
+            this._emitXMLReady({ name, fontSize });
         });
     }
 
@@ -44,7 +45,7 @@ export class XMLReader {
         return new Blob([serializer.serializeToString(xmlDoc)], { type: 'text/xml' });
     }
 
-    _emitXMLReady({ file, status = true }) {
-        masterStream.emit("onXMLReady", { file, status });
+    _emitXMLReady({ name, fontSize, status = true }) {
+        masterStream.emit("onXMLReady", { name, fontSize, status });
     }
 }

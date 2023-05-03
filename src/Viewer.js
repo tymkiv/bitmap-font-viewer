@@ -32,6 +32,7 @@ export class Viewer {
         } else {
             this.bitmapText.text = store.text;
             this.bitmapText.fontName = store.choosedFont;
+            this.bitmapText.fontSize = store.fonts[store.choosedFont];
         }
     }
 
